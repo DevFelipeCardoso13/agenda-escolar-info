@@ -1,0 +1,15 @@
+export const initialEquipamentos = [
+  { id: 1, nome: "Chromebook Samsung", tipo: "chromebook", local: "Geral", total: 39, emUso: 34, reparo: 5 },
+  { id: 2, nome: "Netbook Positivo", tipo: "netbook", local: "Geral", total: 66, emUso: 65, reparo: 1 },
+  { id: 3, nome: "Notebook Positivo", tipo: "notebook", local: "Geral", total: 20, emUso: 20, reparo: 0 },
+  { id: 4, nome: "Tablet Positivo", tipo: "tablet", local: "Geral", total: 130, emUso: 116, reparo: 14 },
+  { id: 5, nome: "Computadores Acessa", tipo: "computador", local: "Lab Acessa", total: 18, emUso: 16, reparo: 2 },
+  { id: 6, nome: "Comp. Sala de Leitura", tipo: "computador", local: "Sala de Leitura", total: 2, emUso: 2, reparo: 0 },
+  { id: 7, nome: "Computadores Secretaria", tipo: "computador", local: "Secretaria", total: 5, emUso: 5, reparo: 0 },
+  { id: 8, nome: "Computadores Gestão", tipo: "computador", local: "Gestão", total: 6, emUso: 6, reparo: 0 },
+  { id: 9, nome: "Netbook Sala Maker", tipo: "netbook", local: "Sala Maker", total: 30, emUso: 30, reparo: 0 },
+  { id: 10, nome: "Computadores Professores", tipo: "computador", local: "Sala Professores", total: 1, emUso: 1, reparo: 0 },
+  { id: 11, nome: "Notebook Ultra", tipo: "notebook", local: "Geral", total: 15, emUso: 13, reparo: 2 },
+  { id: 12, nome: "Comp. Sala de Recursos", tipo: "computador", local: "Sala de Recursos", total: 2, emUso: 2, reparo: 0 },
+  { id: 13, nome: "Computadores Sala Maker", tipo: "computador", local: "Sala Maker", total: 1, emUso: 1, reparo: 0 },
+];
