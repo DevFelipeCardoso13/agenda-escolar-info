@@ -26,7 +26,7 @@ import { AgendamentosModule } from './agendamentos/agendamentos.module';
         password: configService.get<string>('DB_PASSWORD', ''),
         database: configService.get<string>('DB_DATABASE', 'escola_agendamento'),
         entities: [User, Equipamento, Agendamento],
-        synchronize: false,
+        synchronize: true,
         timezone: 'Z',
       }),
     }),

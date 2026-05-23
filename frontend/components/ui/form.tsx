@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Controller, type Control, type FieldValues, type Path, type FieldPathValues } from "react-hook-form";
+import { Controller, type Control, type FieldValues, type Path, type ControllerRenderProps } from "react-hook-form";
 import { cn } from "@/lib/utils";
 
 export function Form({ className, children, ...props }: React.HTMLAttributes<HTMLFormElement>) {
@@ -18,13 +18,7 @@ export function FormField<TFormValues extends FieldValues>({
   control: Control<TFormValues>;
   name: Path<TFormValues>;
   render: (params: {
-    field: {
-      value: unknown;
-      onChange: (...event: any[]) => void;
-      onBlur: () => void;
-      name: string;
-      ref: React.Ref<any>;
-    };
+    field: ControllerRenderProps<TFormValues, Path<TFormValues>>;
   }) => React.ReactNode;
 }) {
   return <Controller control={control} name={name} render={render} />;

@@ -4,6 +4,7 @@ import {
   OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+
 import { UserTipo } from '../common/enums/user-tipo.enum';
 import { Agendamento } from './agendamento.entity';
 
@@ -12,13 +13,23 @@ export class User {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ length: 255 })
+  @Column({
+    type: 'varchar',
+    length: 255,
+  })
   nome: string;
 
-  @Column({ length: 255, unique: true })
+  @Column({
+    type: 'varchar',
+    length: 255,
+    unique: true,
+  })
   email: string;
 
-  @Column({ length: 255 })
+  @Column({
+    type: 'varchar',
+    length: 255,
+  })
   senha: string;
 
   @Column({
@@ -28,9 +39,16 @@ export class User {
   })
   tipo: UserTipo;
 
-  @Column({ length: 20, nullable: true })
-  telefone: string | null;
+  @Column({
+    type: 'varchar',
+    length: 20,
+    nullable: true,
+  })
+  telefone?: string;
 
-  @OneToMany(() => Agendamento, (agendamento) => agendamento.professor)
+  @OneToMany(
+    () => Agendamento,
+    (agendamento) => agendamento.professor,
+  )
   agendamentos: Agendamento[];
 }
